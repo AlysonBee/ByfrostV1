@@ -18,4 +18,4 @@ And visit
 http://localhost:4200/indexer
 ```
 
-Read all about it <a href="https://medium.com/p/42508dbaaf6f/edit">here</a>.
+Read all about it <a href="https://medium.com/p/42508dbaaf6f/edit" target="_blank">here</a>.
