@@ -82,7 +82,7 @@ func organizeData(filename string) {
 	tokens := BuildTokenList(fileContent, filename)
 
 	golang.ParseTypes(GenericTokensToGolangTokens(tokens), filename)
-	golang.Parser(GenericTokensToGolangTokens(tokens), filename)
+	golang.Parser(GenericTokensToGolangTokens(tokens), filename, *absoluteProjectPath)
 }
 
 func createPath(path string) string {

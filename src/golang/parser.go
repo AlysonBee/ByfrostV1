@@ -5,6 +5,8 @@ import (
 	"strings"
 )
 
+var importName string
+
 // GoParser is the structure that'll control the parsing process for Go tokens
 type GoParser struct {
 	tokens []*Token
@@ -446,11 +448,8 @@ func createPath(path string) string {
 			break
 		}
 	}
-	// return "/Users/alyson/tutorial/CompilerGenerator/scanner" + path[x:]
-	// return "/Users/alyson/tutorial/CIndexer/src" + path[x:]
-	return "/Users/alyson/core/src/bitx" + path[x:]
-	// return "/Users/alyson/tutorial/GoVirtualFilesystem/src/05" + path[x:]
-	// return "/Users/alyson/tutorial/byfrostTest" + path[x:]
+
+	return importName + path[x:]
 }
 
 func resolveImportCall(libraryName string) string {
@@ -704,9 +703,9 @@ func getMethod(filepath string) {
 	// fmt.Println("\n\n")
 }
 
-func Parser(tokens []*Token, filepath string) {
+func Parser(tokens []*Token, filepath, absoluteProjectPath string) {
 	parser = newParser(tokens)
-
+	importName = absoluteProjectPath
 	for {
 		if parser.eof() {
 			break
