@@ -1,0 +1,137 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: linear-gradient(to right, #FF33E9 , #8033FF);
+}
+
+.editor-block ::ng-deep {
+    background-color: #595959;
+    color: white;
+}
+
+#line{
+    stroke-width:2px;
+    stroke:rgb(0,0,0);
+}
+
+[draggable=true] {
+    cursor: move;
+  }
+  
+  .resizable {
+    overflow: scroll;
+    resize: both;
+    max-width: 300px;
+    max-height: 460px;
+    border: 1px solid black;
+    min-width: 50px;
+    min-height: 50px;
+    background-color: skyblue;
+  }
+
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+
+.sidebar-content {
+ width: 10vw;
+}
+.sidebar-open{
+    background-color:grey;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+ 
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.btnsidebar{
+   float: right;
+   position: fixed;
+    background-color: black;
+    left: 90%;
+    color: #EC48F9;
+    border: 1px solid #555555; 
+    border-radius: 10px;
+    z-index: 10;
+}
+.btnsidebar:hover{
+    box-shadow: 2px 2px 5px gray;
+} 
+.sidebar-slider {
+    position: fixed;
+    float: right;
+    top: -17%;
+    left: 8%;
+    bottom: 0;
+    background-image: linear-gradient(#0A8FF8, #0AF8B7);
+   //  background-image: linear-gradient(#0766B0, #B902F8);
+    transform: translateX(100%);
+    transition: ease-in-out 300ms transform;
+    // width: 600px;
+    z-index: 10;
+
+    width: 60vw;
+ 
+    position: absolute;
+}
+.sidebar-slider.sidebar-slide-in {
+    transform: translateX(300%);
+    transition: ease-in-out 100ms transform;
+}
+.sidebar-close {
+    position: right;
+    top: 0;
+    right: 0;
+    color: black;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    margin: 7px;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 21px;
+    font-weight: 400;
+}
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    height: 100%;
+    margin-top:66px;
+    
+}
+
+.set-sidebar-text{
+    padding: 11px;
+}
+.set-sidebar-text:hover{
+    background-image: linear-gradient(to right, rgb(150, 218, 250),black);
+    color: black;
+    border-left: 10px solid rgb(3, 172, 250);
+    cursor: pointer;
+}
+
+.container {
+  background-color: black;
+}
+
+.visible {
+  background: none;
+	color: white;
+	border: none;
+	padding: 10;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}

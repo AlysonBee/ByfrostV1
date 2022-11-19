@@ -1,0 +1,24 @@
+
+
+<button class="sidebar-open btnsidebar" (click)="sidebarShow = !sidebarShow">
+    Info
+  </button>
+  <div class="sidebar-slider" style="position:fixed" [class.sidebar-slide-in]="sidebarShow">
+    <button class="sidebar-close" (click)="sidebarShow = !sidebarShow">x</button>
+    <div class="sidebar-content" style="margin-left:15px;">
+        <nav class="navbar navbar-default">
+            <h5>Visible:</h5>
+        </nav>
+        <div class="container" style="overflow: auto; width:400px;">
+            <div *ngFor="let label of positionList | keyvalue">
+                <button class="visible" id="visible:{{ label.key }}">{{ label.key | filesystemPipe }}</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+<div id="testId" style="position:relative;margin:50;transition: color 2s ease 0s; overflow:visible; width:8000%;height:8000%;" #done *ngFor="let block of divList | keyvalue">
+    <div [innerHTML]="block.value | sanitizeHtml"></div> 
+</div>
+

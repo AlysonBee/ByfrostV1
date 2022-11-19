@@ -1,0 +1,13 @@
+
+{
+	"background-color": "black",
+	"DATATYPE": "#33cc33",
+	"IF":     "#ffff00",
+	"ELSE":   "#ffff00",
+	"WHILE":  "#ffff00",
+	"DO":     "#FFFF00",
+	"RETURN": "#ffff00",
+	"STRING": "#ff1ac6",
+	"NUMBER": "#ff1ac6",
+	"ALL": "#ffffff"
+}
